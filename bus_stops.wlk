@@ -20,8 +20,7 @@ class vehicles { // Establezco la clase de los vehiculos
 
 
    method go_to_terminal() {
-
-
+        if(stops != []){
         stops.forEach({ stop =>  //llama a todos lo methodos posteriores para crear el ciclo del colectivo
             if (start_stop < stops.size() - 1) {
                 move = true
@@ -39,6 +38,10 @@ class vehicles { // Establezco la clase de los vehiculos
                 start_stop = 0
             }
         })
+    }
+
+    else{return null}
+    
     }
 
     method remaining_stops() = stops.size() -1 - start_stop  
@@ -115,10 +118,10 @@ class Bus_stop{ // Clase de paradas
 class Routes{
 
     var property stops = []
-
+   
     method create_stops(amounth) {
 
-        if(amounth > 0 and ){
+        if(amounth > 1 and amounth < 99){
      
             amounth.times({stop => stops.add(new Bus_stop(amounth_people_weating = 1.randomUpTo(10).round()))})
 
