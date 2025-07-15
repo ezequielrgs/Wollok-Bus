@@ -115,10 +115,10 @@ class Bus_stop{ // Clase de paradas
 class Routes{
 
     var property stops = []
-   
+
     method create_stops(amounth) {
 
-        if(amounth > 0 and amounth < 30){
+        if(amounth > 0 and ){
      
             amounth.times({stop => stops.add(new Bus_stop(amounth_people_weating = 1.randomUpTo(10).round()))})
 
