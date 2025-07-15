@@ -62,7 +62,6 @@ class vehicles { // Establezco la clase de los vehiculos
             move = false
     }
 
-
   method take_people(stop) {
 
     amounth_people += stop.amounth_people_weating()
@@ -85,11 +84,7 @@ class vehicles { // Establezco la clase de los vehiculos
    
     method can_be_posible_go_terminal() =  self.nafta_necessary() < amounth_nafta // Recargar Nafta si Nafta == 0 entonces recorre la lista medianto la bariable index para buscar la estacion
    
-    method recharge(){
-           
-            amounth_nafta = amounth_nafta_max
-
-    }
+    method recharge(){amounth_nafta = amounth_nafta_max} // Recarga de nafta al llegar a la terminal
 
     method down_people(stop){//si no es posible ir a la terminal divide a la cantidad de personas y recalcula
 
