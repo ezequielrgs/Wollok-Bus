@@ -60,6 +60,7 @@ class vehicles { // Establezco la clase de los vehiculos
             amounth_nafta -= (1 + (0.1 * amounth_people))
 
             move = false
+            
     }
 
   method take_people(stop) {
@@ -117,7 +118,7 @@ class Routes{
    
     method create_stops(amounth) {
 
-        if(amounth > 0){
+        if(amounth > 0 and amounth < 30){
      
             amounth.times({stop => stops.add(new Bus_stop(amounth_people_weating = 1.randomUpTo(10).round()))})
 
@@ -144,4 +145,3 @@ const route = new Routes()
 //------------------------------------------------------------------------------------------------------------------------
 
 const bus = new vehicles(type = "bus", amounth_people = 0, amounth_remaining = 0, amounth_people_max = 18)
-
